@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# 如果没有设置文件匹配模式，使用默认值
+[ -z "${PLUGIN_PATTERN}" ] && PLUGIN_PATTERN='*.pb.go'
+
+find "${PLUGIN_FOLDER}" -name "${PLUGIN_PATTERN}" -exec protoc-go-inject-tag -input={} \;
