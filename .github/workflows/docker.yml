@@ -1,4 +1,4 @@
-name: docker-protoc-go
+name: drone-protobuf-go
 
 on:
   push:
