@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/docker-protoc-go-inject-tag.iml" filepath="$PROJECT_DIR$/.idea/docker-protoc-go-inject-tag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/drone-protobuf-go.iml" filepath="$PROJECT_DIR$/.idea/drone-protobuf-go.iml" />
     </modules>
   </component>
 </project>
