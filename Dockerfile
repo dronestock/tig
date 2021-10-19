@@ -7,7 +7,7 @@ LABEL Description="Protobuf生成的Golang代码后，处理自定义Tag的Docke
 
 
 # 复制文件
-COPY docker /
+COPY tag.sh /bin
 
 
 
@@ -16,13 +16,13 @@ RUN set -ex \
     \
     \
     # 安装标签处理程序
-    && go get github.com/favadi/protoc-go-inject-tag.sh \
+    && go get github.com/favadi/protoc-go-inject-tag \
     \
     \
     \
     # 增加执行权限
-    && chmod +x /usr/bin/tag.sh
+    && chmod +x /usr/tag.sh
 
 
 
-ENTRYPOINT /usr/bin/tag.sh
+ENTRYPOINT /usr/tag.sh
