@@ -16,13 +16,13 @@ RUN set -ex \
     \
     \
     # 安装标签处理程序
-    && go get github.com/favadi/protoc-go-inject-tag \
+    && go get github.com/favadi/protoc-go-inject-tag.sh \
     \
     \
     \
     # 增加执行权限
-    && chmod +x /usr/bin/drone
+    && chmod +x /usr/bin/tag.sh
 
 
 
-ENTRYPOINT /usr/bin/drone
+ENTRYPOINT /usr/bin/tag.sh
