@@ -21,8 +21,8 @@ RUN set -ex \
     \
     \
     # 增加执行权限
-    && chmod +x /usr/tag.sh
+    && chmod +x /bin/tag.sh
 
 
 
-ENTRYPOINT /usr/tag.sh
+ENTRYPOINT /bin/tag.sh
