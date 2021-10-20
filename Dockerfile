@@ -15,12 +15,12 @@ FROM storezhang/alpine
 
 
 MAINTAINER storezhang "storezhang@gmail.com"
-LABEL architecture="AMD64/x86_64" version="latest" build="2021-10-12"
+LABEL architecture="AMD64/x86_64" version="latest" build="2021-10-20"
 LABEL Description="修改Golang代码的Tag标签"
 
 
 # 复制文件
-COPY --from=builder /usr/bin/yq /usr/bin/yq
+COPY --from=builder /usr/bin/protoc-go-inject-tag /usr/bin/protoc-go-inject-tag
 COPY --from=builder /usr/local/go/bin/go /usr/bin/go
 # 增加这一步是因为go命令在执行时，需要GOROOT目录，而正常的GOROOT目录是/usr/local/go
 COPY --from=builder /usr/local/go/VERSION /usr/local/go/VERSION
