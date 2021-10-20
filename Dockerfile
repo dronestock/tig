@@ -6,7 +6,7 @@ ENV TAG_VERSION 1.3.0
 
 
 # 安装标签处理程序
-RUN go get github.com/favadi/protoc-go-inject-tag@v${TAG_VERSION}
+RUN go install github.com/favadi/protoc-go-inject-tag@v${TAG_VERSION}
 
 
 
