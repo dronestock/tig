@@ -7,4 +7,4 @@
 PLUGIN_FOLDER=$(eval echo "${PLUGIN_FOLDER}")
 
 # 遍历目录，处理标签
-find "${PLUGIN_FOLDER}" -name "${PLUGIN_PATTERN}" -exec protoc-go-inject-tag -input={} \;
+protoc-go-inject-tag -input="${PLUGIN_FOLDER}/${PLUGIN_PATTERN}"
