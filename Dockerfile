@@ -21,6 +21,7 @@ LABEL Description="修改Golang代码的Tag标签"
 
 # 复制文件
 COPY --from=builder /go/bin/protoc-go-inject-tag /usr/bin/protoc-go-inject-tag
+COPY drone.sh /bin
 COPY tag.sh /bin
 
 
@@ -30,6 +31,7 @@ RUN set -ex \
     \
     \
     # 增加执行权限
+    && chmod +x /bin/drone.sh \
     && chmod +x /bin/tag.sh \
     \
     \
@@ -38,4 +40,4 @@ RUN set -ex \
 
 
 
-ENTRYPOINT /bin/tag.sh
+ENTRYPOINT /bin/drone.sh
