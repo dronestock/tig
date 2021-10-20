@@ -1,4 +1,4 @@
-name: docker-protoc-go
+name: drone-itg
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: storezhang/protobuf-go:latest
+          tags: storezhang/itg:latest
 
       - name: 输出镜像编码
         run: echo ${{ steps.docker_build.outputs.digest }}
