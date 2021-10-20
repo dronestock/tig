@@ -1,3 +1,2 @@
-# docker-protoc-go
-一个处理Protobuf生成Golang代码的Docker镜像，功能有
-- 自定义标签
+# Tig
+一个处理Golang代码标签的Drone插件

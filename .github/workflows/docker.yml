@@ -1,4 +1,4 @@
-name: drone-itg
+name: drone-tig
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: storezhang/itg:latest
+          tags: storezhang/tig:latest
 
       - name: 输出镜像编码
         run: echo ${{ steps.docker_build.outputs.digest }}
